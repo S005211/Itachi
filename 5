@@ -1,0 +1,30 @@
+def chatbot():
+    print("Hi, I'm Chatbot. How can I help you today?")
+    while True:
+        user_input = input("You: ").lower()
+        if user_input == "bye":
+            print("Chatbot: Bye! Have a great day.")
+            break
+        elif user_input == "hello":
+            print("Chatbot: Hello there! How are you doing today?")
+        elif user_input == "how are you":
+            print("Chatbot: I'm doing great, thanks for asking. What would you like to know?")
+        elif user_input == "phone":
+            print("Chatbot: Which brand are you interested in?")
+        elif user_input == "apple":
+            print("Chatbot: Okay. What is your budget?")
+        elif user_input.isdigit():
+            budget = int(user_input)
+            if budget >= 100000:
+                print("Chatbot: Alright. Here are some top models.")
+            else:
+                print("Chatbot: Unfortunately, we don't have models within your budget.")
+        elif user_input == "thank you":
+            print("Chatbot: You're welcome!")
+            print("See you again.")
+            break
+        else:
+            print("Chatbot: I didn't understand what you said. Can you please rephrase?")
+
+if __name__ == "__main__":
+    chatbot()
